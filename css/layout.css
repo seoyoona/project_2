@@ -29,8 +29,8 @@ main .creators .bot .c_box{display: inline-block; width: 15rem; height: 25rem; b
 section:nth-child(3){height: 110rem; background:#333;}
 main .original .c_content{display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin-top: 10rem;}
 main .original .youtube{display: inline-block; width: 50rem; height: 30rem; background: var(--primary);}
-main .original .textbox li{display: flex; flex-flow: column;}
-main .original .textbox ul li{display: block; width: 35rem; height: 5rem; background: var(--primary); margin: 1rem 0;}
+main .original .textbox{display: flex; flex-flow: column;}
+main .original .textbox li{display: block; width: 35rem; height: 5rem; background: var(--primary); margin: 1rem 0;}
 
 /* footer */
 footer{height: 15rem; background: #222;}
