@@ -1,0 +1,38 @@
+.wrap{width: 100%; text-align: center; color: white; font-size: 200%; font-weight: boldf;}
+.container{width: 100%; max-width: 1440px; margin: auto; background: rgba(255,255,255,.3) ; height: inherit;}
+/* header */
+header{height: 155px;}
+header .header_top{height: 155px; background: #888; display: flex; justify-content: space-between; align-items: center;}
+header .header_top div{display: inline-block;}
+header .header_top .logo{width: 20rem; height: 2.5rem; background: var(--primary); margin-left: 3rem;}
+header .header_top .lang{width: 10rem; height: 2.5rem; background: var(--primary); margin-left: 40rem;}
+header .header_top .menu_btn{width: 10rem; height: 2.5rem; background: var(--primary);}
+
+/* hero banner */
+.hero_banner{height: 760px; background: #777;}
+
+/* main */
+main{height:330rem ; background: #666;}
+    /* business */
+section:nth-child(1){height: 110rem ; background: #555;}
+main .business div{display: flex; flex-direction: row; justify-content: space-between; align-items: center;}
+main .business .b_box{display: inline-block; width: 17rem; height: 17rem; background: var(--primary); margin-top: 10rem;}
+    /* creators */
+section:nth-child(2){height: 110rem; background: #444;}
+main .creators {display: flex; flex-direction: column;  justify-content: space-between; align-items: center;}
+main .creators .top{display: flex; flex-direction: row;}
+main .creators .top .c_box{display: inline-block; width: 15rem; height: 25rem; background: var(--primary); margin: 0 2rem;}
+main .creators .bot{display: flex; flex-direction: row;}
+main .creators .bot .c_box{display: inline-block; width: 15rem; height: 25rem; background: var(--primary); margin: 0 2rem; margin-bottom: 20rem;}
+
+    /* original */
+section:nth-child(3){height: 110rem; background:#333;}
+main .original .c_content{display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin-top: 10rem;}
+main .original .youtube{display: inline-block; width: 50rem; height: 30rem; background: var(--primary);}
+main .original .textbox li{display: flex; flex-flow: column;}
+main .original .textbox ul li{display: block; width: 35rem; height: 5rem; background: var(--primary); margin: 1rem 0;}
+
+/* footer */
+footer{height: 15rem; background: #222;}
+.footer_nav{height: 5rem; background: #111;}
+.footer_info{height: 10rem; background: #000;}
