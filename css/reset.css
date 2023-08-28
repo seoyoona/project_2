@@ -1,5 +1,5 @@
-*{margin: 0; padding: 0; box-sizing: border-box;}
-.wrap{margin: auto;}
+*{margin: 0; padding: 0; box-sizing: border-box; }
+.wrap{margin: auto; background: var(--background);}
 ul{list-style: none;}
 a{text-decoration: none;}
 :root{--primary:#4687CD; --secondary_r:#B0112A;--secondary_y:#FFCA24;--secondary_g:#7777;--background:#000;--accent:#fff;}

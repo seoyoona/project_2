@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<style>
+    *{margin: 0; padding: 0; box-sizing: border-box; }
+    .wrap{margin: auto; background: var(--background); position: relative; width: 100%;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: var(--accent);}
+    :root{--primary:#4687CD; --secondary_r:#B0112A;--secondary_y:#FFCA24;--secondary_g:#7777;--background:#000;--accent:#fff;}
+    
+    .wrap { width: 100%; text-align: center; color: white;} 
+    .container { width: 100%; max-width: 1440px; margin: auto;; height: inherit; }
+
+    /* header */
+    header { margin: auto; justify-content: center; align-items: center;} 
+    header .header_top { width: 100% ;max-width: 1440px; height: 880px; position: relative; margin: auto; justify-content: center; align-items: center;} 
+    header .header_wrap { height: 120px; display: flex; justify-content: space-between; align-items: center; position: relative; } 
+    header .header_wrap li { display: inline-block; } 
+    header .header_wrap .logo { position: absolute; left:2rem; } 
+    header .header_wrap .lang { position: absolute; right: 7rem; } 
+    header .header_wrap .lan {display: inline-block;}
+    header .header_wrap .lang .ko:after { position: absolute; left: 25px; top: 57px; content: ''; display: block; background-color: rgba(255,255,255,.2); width: 29px; height: 1px; } 
+    header .header_wrap .lang .en{padding-left: 30px;}
+    header .header_wrap .lang a { color: white; font-size: 50%; line-height: 120px; } 
+    header .header_wrap .menu_btn { position: absolute; right: 2rem; } 
+    header .header_wrap .menu_btn a { color: white; }
+    /* bg */
+    .bg{position: relative; top: 0; left: 0; width: 100%; max-width: 100%;}
+    #background-video { position: absolute; top: 0; left: 0; height: 100%;} 
+    .bg .container{position: relative;}
+    .bg_textbox{position: absolute; bottom: 20%; left: 20%;}
+    /* main */
+    main { height: auto; } 
+     /* business */
+    section:nth-child(1) { height: auto; width: 100%; margin-bottom: 5rem;}
+    main .business {overflow: hidden;}
+    main .business h1{margin-top: 2rem; font-weight: 900; font-size: 300%;}
+    main .business li { display: flex; flex-flow: wrap row; justify-content: space-between; align-items: center; } 
+    main .business .b_box { display: inline-block; margin-top: 10rem; padding: 0 2rem;}
+    main .business .b_box:nth-child(4){transform: translateY(-17rem);}
+     /* creators */
+    section:nth-child(2) { height: auto; } 
+    main .creators { display: flex; flex-direction: column; justify-content: space-between; align-items: center; } 
+    main .creators h1{margin-top: 2rem; font-weight: 900; font-size: 300%; margin-bottom: 10rem;}
+    main .creators .top { display: flex; flex-direction: row; } 
+    main .creators .top .c_box { display: inline-block; width: 15rem; height: 25rem; margin: 2rem 2rem; }
+    main .creators .bot { display: flex; flex-direction: row; } 
+    main .creators .bot .c_box { display: inline-block; width: 15rem; height: 25rem; margin: 2rem 2rem; margin-bottom: 20rem; }
+    .top .c_box:nth-child(1){background: url('/img/c_1.jpg') no-repeat;}
+    .top .c_box:nth-child(2){background: url('/img/c_2.jpg') no-repeat; transform: translateY(-3rem);}
+    .top .c_box:nth-child(3){background: url('/img/c_3.jpg') no-repeat;}
+    .bot .c_box:nth-child(1){background: url('/img/c_4.jpg') no-repeat;}
+    .bot .c_box:nth-child(2){background: url('/img/c_5.jpg') no-repeat; transform: translateY(-3rem);}
+    .bot .c_box:nth-child(3){background: url('/img/c_6.jpg') no-repeat;}
+    .more{border-bottom: 3px solid white; padding-bottom: .5rem;}
+    /* original */
+    section:nth-child(3) { height: auto; } 
+    main .original .o_content { display: flex; flex-direction: row; justify-content: space-evenly; align-items: center; margin-top: 10rem; } 
+    main .original h1{margin-top: 2rem; font-weight: 900; font-size: 300%; margin-bottom: 10rem;}
+    main .original .youtube { display: inline-block; width: 50rem; height: 30rem;  } 
+    main .original .textbox { display: flex; flex-flow: column; } 
+    main .original .textbox li { display: block; width: 35rem; height: 5rem; margin: 0rem 0; border-bottom: 3px solid white ; } 
+    main .original .textbox li a{line-height: 5rem; font-size: 130%;} 
+    .more{border-bottom: 3px solid white; padding-bottom: .5rem;}
+    .o_content video{width: 100%;}
+
+    /* footer */
+    footer { height: 15rem; } 
+    .footer_nav { height: 5rem; } 
+    .footer_info { height: 10rem; } 
+
+
+</style>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="header_top">
+                <div class="container">
+                    <div class="header_wrap">
+                        <ul class="logo">
+                            <li><a href="#"><img src="/img/header_logo.png" alt="로고" class="header_pc"></a></li>
+                        </ul>                       
+                        <ul class="lang">
+                            <li class="lan ko"><a href="#" class="on">KO</a></li>
+                            <li class="lan en"><a href="#">EN</a></li>
+                        </ul>                       
+                        <ul class="menu_btn">
+                            <li><span class="material-symbols-outlined">menu</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg_textbox">
+                    <div class="container">
+                        <h1 class="bg_txt">
+                            <span>
+                                <span class="animate_wrapper">
+                                    <span class="word01">크리에이터와</span>
+                                    <span></span>
+                                </span>
+                                <span class="animate_wrapper">
+                                    <span class="word02">함께</span>
+                                    <span></span>
+                                </span>
+                                <br>
+                                <span class="animate_txtbx">
+                                    <span class="animate_wrapper">
+                                        <span class="word03">세상을</span>
+                                        <span></span>
+                                    </span>
+                                    <span class="animate_wrapper">
+                                        <span class="word04">더</span>
+                                        <span></span>
+                                    </span>
+                                    <span class="animate_wrapper">
+                                        <span class="word05">즐겁게</span>
+                                        <span></span>
+                                    </span>
+                                </span>
+                            </span>
+                        </h1>
+                    </div>
+                </div>
+                <div class="bg">
+                    <video autoplay muted loop id="background-video">
+                        <source src="/img/main_video4.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section>
+                <div class="business">
+                    <h1>SANDBOX BUSINESS</h1>
+                    <ul class="b_content">
+                        <li class="b_box"><a href="#"><img src="/img/IMAGE.jpg" alt="creator partnership"></a></li>
+                        <li class="b_box"><a href="#"><img src="/img/IMAGE-1.jpg" alt="marketing solution"></a></li>
+                        <li class="b_box"><a href="#"><img src="/img/IMAGE-2.jpg" alt="IP 사업"></a></li>
+                        <li class="b_box"><a href="#"><img src="/img/IMAGE-3.jpg" alt="production"></a></li>
+                        <li class="b_box"><a href="#"><img src="/img/IMAGE-4.jpg" alt="game/web3"></a></li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <div class="container creators">
+                    <h1>SANDBOX CREATORS</h1>
+                    <div class="top">
+                        <ul class="c_content">
+                            <li class="c_box"><a href="#"></a></li>
+                            <li class="c_box"><a href="#"></a></li>
+                            <li class="c_box"><a href="#"></a></li>
+                        </ul>
+                    </div>
+                    <div class="bot">
+                        <ul class="c_content">
+                            <li class="c_box"><a href="#"></a></li>
+                            <li class="c_box"><a href="#"></a></li>
+                            <li class="c_box"><a href="#"></a></li>
+                        </ul>
+                    </div>
+                    <div class="more"><a href="#">샌드박스 크리에이터 더보기 <span class="material-symbols-outlined arrow">south_east</span></a></div>
+                </div>
+            </section>
+            <section>
+                <div class="container original">
+                    <h1>SANDBOX ORIGINAL</h1>
+                    <div class="o_content">
+                        <div class="youtube">
+                            <video src="/img/original_youtube.mp4"></video>
+                        </div>
+                        <ul class="textbox">
+                            <li class="txt"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.<span class="material-symbols-outlined">call_made</span></a></li>
+                            <li class="txt"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.<span class="material-symbols-outlined">call_made</span></a></li>
+                            <li class="txt"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.<span class="material-symbols-outlined">call_made</span></a></li>
+                            <li class="txt"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.<span class="material-symbols-outlined">call_made</span></a></li>
+                            <li class="txt"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.<span class="material-symbols-outlined">call_made</span></a></li>
+                            <li class="txt"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.<span class="material-symbols-outlined">call_made</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="more"><a href="#">샌드박스 오리지널 더보기 <span class="material-symbols-outlined arrow">south_east</span></a></div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer_nav">
+                <div class="container">
+                    <h2>footer_nav</h2>
+                </div>
+            </div>
+            <div class="footer_info">
+                <div class="container">
+                    <h2>footer_info</h2>
+                </div>
+            </div>
+        </footer>
+    </div>

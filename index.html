@@ -6,6 +6,9 @@
     <title>sandbox</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/layout.css">
@@ -15,58 +18,107 @@
         <header>
             <div class="header_top">
                 <div class="container">
-                    <h2>Header</h2>
-                    <div class="logo"><a href=""></a></div>
-                    <div class="lang"></div>
-                    <div class="menu_btn"></div>
+                    <div class="header_wrap">
+                        <ul class="logo">
+                            <li><a href="#"><img src="/img/header_logo.png" alt="로고" class="header_pc"></a></li>
+                        </ul>                       
+                        <ul class="lang">
+                            <li class="lan ko"><a href="#" class="on">KO</a></li>
+                            <li class="lan en"><a href="#">EN</a></li>
+                        </ul>                       
+                        <ul class="menu_btn">
+                            <li><span class="material-symbols-outlined">menu</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg_textbox">
+                    <div class="container">
+                        <h1 class="bg_txt">
+                            <span>
+                                <span class="animate_wrapper">
+                                    <span class="word01">크리에이터와</span>
+                                    <span></span>
+                                </span>
+                                <span class="animate_wrapper">
+                                    <span class="word02">함께</span>
+                                    <span></span>
+                                </span>
+                                <br>
+                                <span class="animate_txtbx">
+                                    <span class="animate_wrapper">
+                                        <span class="word03">세상을</span>
+                                        <span></span>
+                                    </span>
+                                    <span class="animate_wrapper">
+                                        <span class="word04">더</span>
+                                        <span></span>
+                                    </span>
+                                    <span class="animate_wrapper">
+                                        <span class="word05">즐겁게</span>
+                                        <span></span>
+                                    </span>
+                                </span>
+                            </span>
+                        </h1>
+                    </div>
+                </div>
+                <div class="bg">
+                    <video autoplay muted loop id="background-video">
+                        <source src="/img/main_video4.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
         </header>
-        <div class="hero_banner">
-            <div class="container">
-                <h2>hero_banner</h2>
-            </div>
-        </div>
         <main>
             <section>
-                <div class="container business">
-                    <h2>Content 1_Business</h2>
-                    <div class="b_box"><a href=""></a></div>
-                    <div class="b_box"><a href=""></a></div>
-                    <div class="b_box"><a href=""></a></div>
-                    <div class="b_box"><a href=""></a></div>
-                    <div class="b_box"><a href=""></a></div>
+                <div class="business">
+                    <h1>SANDBOX BUSINESS</h1>
+                    <ul class="b_content">
+                        <li class="b_box"><a href="#"><img src="/img/IMAGE.jpg" alt="creator partnership"></a></li>
+                        <li class="b_box"><a href="#"><img src="/img/IMAGE-1.jpg" alt="marketing solution"></a></li>
+                        <li class="b_box"><a href="#"><img src="/img/IMAGE-2.jpg" alt="IP 사업"></a></li>
+                        <li class="b_box"><a href="#"><img src="/img/IMAGE-3.jpg" alt="production"></a></li>
+                        <li class="b_box"><a href="#"><img src="/img/IMAGE-4.jpg" alt="game/web3"></a></li>
+                    </ul>
                 </div>
             </section>
             <section>
                 <div class="container creators">
-                    <h2>Content 2_Creators</h2>
+                    <h1>SANDBOX CREATORS</h1>
                     <div class="top">
-                        <div class="c_box"></div>
-                        <div class="c_box"></div>
-                        <div class="c_box"></div>
+                        <ul class="c_content">
+                            <li class="c_box"><a href="#"></a></li>
+                            <li class="c_box"><a href="#"></a></li>
+                            <li class="c_box"><a href="#"></a></li>
+                        </ul>
                     </div>
                     <div class="bot">
-                        <div class="c_box"></div>
-                        <div class="c_box"></div>
-                        <div class="c_box"></div>
+                        <ul class="c_content">
+                            <li class="c_box"><a href="#"></a></li>
+                            <li class="c_box"><a href="#"></a></li>
+                            <li class="c_box"><a href="#"></a></li>
+                        </ul>
                     </div>
+                    <div class="more"><a href="#">샌드박스 크리에이터 더보기 <span class="material-symbols-outlined arrow">south_east</span></a></div>
                 </div>
             </section>
             <section>
                 <div class="container original">
-                    <h2>Content 3_Original</h2>
-                    <div class="c_content">
-                        <div class="youtube"></div>
+                    <h1>SANDBOX ORIGINAL</h1>
+                    <div class="o_content">
+                        <div class="youtube">
+                            <video src="/img/original_youtube.mp4"></video>
+                        </div>
                         <ul class="textbox">
-                            <li class="txt"><a href=""></a></li>
-                            <li class="txt"><a href=""></a></li>
-                            <li class="txt"><a href=""></a></li>
-                            <li class="txt"><a href=""></a></li>
-                            <li class="txt"><a href=""></a></li>
-                            <li class="txt"><a href=""></a></li>
+                            <li class="txt"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.<span class="material-symbols-outlined">call_made</span></a></li>
+                            <li class="txt"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.<span class="material-symbols-outlined">call_made</span></a></li>
+                            <li class="txt"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.<span class="material-symbols-outlined">call_made</span></a></li>
+                            <li class="txt"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.<span class="material-symbols-outlined">call_made</span></a></li>
+                            <li class="txt"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.<span class="material-symbols-outlined">call_made</span></a></li>
+                            <li class="txt"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.<span class="material-symbols-outlined">call_made</span></a></li>
                         </ul>
                     </div>
+                    <div class="more"><a href="#">샌드박스 오리지널 더보기 <span class="material-symbols-outlined arrow">south_east</span></a></div>
                 </div>
             </section>
         </main>
@@ -82,7 +134,6 @@
                 </div>
             </div>
         </footer>
-    </div>
     </div>
 </body>
 </html>
