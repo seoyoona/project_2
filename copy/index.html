@@ -75,9 +75,10 @@
     .o_content video{width: 100%;}
 
     /* footer */
-    footer { height: 15rem; } 
-    .footer_nav { height: 5rem; } 
-    .footer_info { height: 10rem; } 
+    footer { height: 15rem; display: flex; flex-direction: row; margin: auto;  justify-content: center; align-items: center;}
+    footer li{display: inline-block;}
+    footer .f_bot{display: flex; flex-flow: row wrap;}
+    footer{}
 
 
 </style>
@@ -191,14 +192,38 @@
             </section>
         </main>
         <footer>
-            <div class="footer_nav">
+            <div class="f_top">
                 <div class="container">
-                    <h2>footer_nav</h2>
+                    <p>CONTACT@SANDBOXNETWORK.NET <span class="material-symbols-outlined">call_made</span></p>
+                    <p>서울시 강남구 논현로 4길 54 4F</p>
+                    <p class="copyright">© Sandbox Network. All rights reserved.</p>
+                </div> 
+            <div class="f_bot">
+                <div class="container">
+                    <div class="f_links">
+                        <ul>
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">IR 공고</a></li>
+                            <li><a href="#">CONTACT</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="footer_info">
                 <div class="container">
-                    <h2>footer_info</h2>
+                    <div class="f_sns">
+                        <ul>
+                            <li><a href="#">YOUTUBE <span class="material-symbols-outlined">call_made</span></a></li>
+                            <li><a href="#">INSTAGRAM <span class="material-symbols-outlined">call_made</span></a></li>
+                            <li><a href="#">FACEBOOK <span class="material-symbols-outlined">call_made</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="f_family_site">
+                        <div class="family_btn">FAMILY SITE</div>
+                            <ul>
+                                <li><a href="#">Meta Toy Dragonz</a></li>
+                            </ul>
+                    </div>
                 </div>
             </div>
         </footer>
