@@ -61,12 +61,12 @@ main .creators .top { display: flex; flex-direction: row; }
 main .creators .top .c_box { display: inline-block; width: 15rem; height: 25rem; margin: 2rem 2rem; background: var(--primary); background: no-repeat center center / cover; } 
 main .creators .bot { display: flex; flex-direction: row; } 
 main .creators .bot .c_box { display: inline-block; width: 15rem; height: 25rem; margin: 2rem 2rem; background: var(--primary); background: no-repeat center center / cover; } 
-main .creators .top .t1 { background: url('/img/c_1.jpg'); } 
-main .creators .top .t2 { background: url('/img/c_2.jpg'); } 
-main .creators .top .t3 { background: url('/img/c_3.jpg'); } 
-main .creators .bot .b1 { background: url('/img/c_4.jpg'); } 
-main .creators .bot .b2 { background: url('/img/c_5.jpg'); } 
-main .creators .bot .b3 { background: url('/img/c_6.jpg'); } 
+main .creators .top .t1 { background: url('img/c_1.jpg'); } 
+main .creators .top .t2 { background: url('img/c_2.jpg'); } 
+main .creators .top .t3 { background: url('img/c_3.jpg'); } 
+main .creators .bot .b1 { background: url('img/c_4.jpg'); } 
+main .creators .bot .b2 { background: url('img/c_5.jpg'); } 
+main .creators .bot .b3 { background: url('img/c_6.jpg'); } 
 main .creators .t2,.b2 { transform: translateY(-3rem); } 
 .more { position: relative; margin-bottom: 4rem; } 
 .more:before { display: block; content: ''; position: absolute; background-color: var(--accent); width: 15rem; height: .1rem; bottom: -50%; right:50%; transform: translateX(50%); } 
