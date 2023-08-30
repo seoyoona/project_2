@@ -4,8 +4,8 @@ a { color: var(--accent); }
 
 /* header */
 header { margin: auto; justify-content: center; align-items: center; position: relative; } 
-.popup{width: 25rem; height: auto; position: absolute; background: rgba(0,0,0,.5); top: 10rem; left: 50%; z-index: 9999999999999999; border-radius: 1.25rem;}
-.popup .close_btn{position: absolute; right: 0; padding: 1rem;}
+.popup{width: 25rem; height: auto; position: fixed; background: rgba(0,0,0,.5); top: 10rem; left: 50%; z-index: 9999999999999999; border-radius: 1.25rem;}
+.popup .close_btn{position: absolute; right: 0; padding: 1rem; cursor: pointer;}
 .popup p{padding-top: 3rem; padding-bottom: 2rem; font-size: 110%; line-height: 150%;}
 header .header_top { width: 100%; max-width: 1440px; height:auto; position: relative; margin: auto; justify-content: center; align-items: center; } 
 header .header_wrap { height: 5rem; width: 100%; display: flex; justify-content: space-between; align-items: center; z-index: 99999; } 

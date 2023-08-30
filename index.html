@@ -21,7 +21,7 @@
         <header>
             <div class="popup">
                 <div class="close_btn"><span class="material-symbols-outlined">cancel</span></div>
-                <p class="warning">이 사이트는 포트폴리오를 위한 사이트이므로, <br>상업적인 이용을 하지 않습니다.</p>
+                <p class="warning">해당 사이트는 학습용으로 제작되었으며 샌드박스와 무관합니다.<br>구직용 포트폴리오로 상업적 목적이 없음을 알립니다.</p>
             </div>
             <div class="header_top">
                 <div class="container">
@@ -227,9 +227,14 @@
     menuButton.addEventListener('click', function() {
         nav.classList.toggle('active');
         document.querySelector('.header .header_wrap').style.display = 
-            (nav.classList.contains('active')) ? 'block' : 'none';
+            (nav.classList.contains('active')) ? 'block' : 'none';});
     });
-});
+    const closeBtn = document.querySelector('.close_btn');
+        const popup = document.querySelector('.popup');
+
+        closeBtn.addEventListener('click', () => {
+          popup.style.display = 'none';
+        });
     </script>
 </body>
 </html>
