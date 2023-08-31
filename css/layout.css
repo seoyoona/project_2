@@ -92,7 +92,7 @@ main .original .textbox li a { line-height: 5rem; font-size: 130%;}
 /* footer */
 hr { border-color:black; } 
 footer { height: 15rem; display: flex; flex-direction: row; } 
-footer .f_info { display: flex; flex-direction: row; margin: auto; justify-content: center; align-items: center; position: relative; } 
+footer .f_info { display: flex; flex-direction: row; margin: auto; justify-content: center; align-items: center; position: relative;  } 
 .f_links a, .f_sns a { font-weight: 800; } 
 footer .f_top { font-weight: 700; display:block; position: absolute; left: 5rem; top: 50%; transform: translateY(-50%); } 
 footer .f_top .email { padding: .5rem; padding-bottom: 1rem; position: relative; } 
