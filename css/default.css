@@ -1,10 +1,33 @@
 /* MOBILE (375px) */
 @media screen and (min-width:375px) {
+    .container { width: 100%; max-width: 375px; margin: auto; height: inherit; } 
+
     /* header */
     header .header_wrap .logo img {height: 2rem;}
     header .header_wrap .lang { position: absolute; right: 5rem; } 
     header .header_wrap .lang .ko:before { display: block; content: ''; position: absolute; background-color: rgba(255,255,255,.4); width: 25px; height: 1px; top: 59px; right: 20px; } 
     header .header_wrap .lang .en { padding-left: 30px; } 
+
+    /* nav */
+    .nav { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; overflow: hidden;} 
+    .nav.active { display: block; } 
+    .dep1,.dep2 { list-style-type: none; } 
+    .dep1 { margin-top: 1rem; text-align: left;} 
+    .dep1 li {  padding: 1rem 2rem; } 
+    .dep1 li a { font-weight: 800; font-size: 2rem; } 
+    .dep1 li span { margin-right: .6rem; font-size: 40%; vertical-align: top; } 
+    .dep2 { display: flex; flex-direction: column; justify-content: left; align-items: flex-start; opacity: 0; max-height: 0; overflow: hidden; transition: all .5s ease-in-out;} 
+    .dep2 li { padding: .3rem .5rem; text-align: left; } 
+    .dep2 li a { font-weight: 700; font-size: .8rem; text-align: left;} 
+    .dep1 li:hover > .w100 > .dep2 {opacity: 1; max-height: 500px} 
+    /* 메뉴 버튼 클릭 시 전체 화면 메뉴 표시 */
+    .menu_btn.gnb.active ~ .nav { display:block; /* active 클래스가 추가되면 보이게 함 */ } 
+    .menu_btn:hover { cursor: pointer; } 
+    /* 첫 번째 수준의 목록에 호버하면 두 번째 수준의 목록 표시 */
+    .nav_icons{position: absolute; top: 85%; left: 50%; transform: translateX(-50%);display: flex; flex-direction: row;}
+    .nav_icons .fa-brands{font-size: 40%; opacity: 80%;}
+    .nav_icons a{margin-right: 1rem; color: var(--accent); }
+
 
     /* popup */
     .popup{width: 20rem; left: 3%;}
@@ -42,7 +65,7 @@
     main .original .youtube { width: 20rem; height: auto; } 
     main .original .textbox { display: block; flex-flow: column; } 
     main .original .textbox ul { justify-content: center; } 
-    main .original .textbox li { display: block; width: 23rem; height: 5rem; margin: 0rem 0; border-bottom: 2px solid rgba(255, 255, 255, 0.3); text-align: left; position: relative; } 
+    main .original .textbox li { display: block; width: 25rem; height: 5rem; margin: 0rem 0; border-bottom: 2px solid rgba(255, 255, 255, 0.3); text-align: left; position: relative; } 
     main .original .textbox li span{position: absolute; display: inline-block; right: 1rem; bottom: 2rem; display: none;}
     main .original .textbox li a { line-height: 5rem; font-size: 100%; padding-left: 2rem;} 
 
@@ -59,8 +82,8 @@
     footer .f_bot .f_links { text-align: left; line-height: 2rem; transform: translateY(10rem);} 
     footer .f_bot .f_sns { text-align: left; line-height: 2rem; margin-left: 2rem; justify-content: space-between; align-items: center;  transform: translateY(10rem);} 
     footer .f_bot .f_dep1{width: 25rem; transform: translateY(-8rem); order: 1; justify-content: center; align-items: center; border-bottom: 2px solid var(--secondary_g);}
-    footer .f_bot .family_btn { position: static; text-align: center; border:none; padding: 0 1rem; padding-bottom: .7rem; margin-left: 2rem;line-height: 150%; transition: all .5s ease-in-out; } 
-    footer .f_bot .family_btn span { line-height: 150%; } 
+    footer .f_bot .family_btn { position: static; text-align: center; border:none; padding-bottom: .7rem; line-height: 150%; transition: all .5s ease-in-out; } 
+    footer .f_bot .family_btn span { line-height: 150%; color: #ffffffb5;} 
 
 
 
