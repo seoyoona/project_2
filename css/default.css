@@ -245,8 +245,7 @@ footer .f_bot .family_btn span { line-height: 150%; }
     /* main_original */
     main .original .o_content { display: flex; flex-direction: column; justify-content: space-between; align-items: center; margin-top: 5rem; } 
     
-    main .original .youtube { position: relative; width: 80%; height: 0; padding-bottom: 56.25%;} 
-    main .original .youtube iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+    main .original .youtube {width: 40rem;} 
     main .original .textbox { display: block; flex-flow: column; } 
     main .original .textbox ul { justify-content: center; } 
     main .original .textbox li { display: block; width: 50rem; height: 5rem; margin: 0rem 0; border-bottom: 2px solid rgba(255, 255, 255, 0.3); text-align: left; position: relative; } 
@@ -276,8 +275,7 @@ footer .f_bot .family_btn span { line-height: 150%; }
     /* main_original */
     main .original .o_content { display: flex; flex-direction: row; justify-content: center; align-items: center; margin-top: 7rem; } 
     main .original h2 { margin-top: 2rem; font-weight: 900; font-size: 3rem; margin-bottom: 10rem; } 
-    main .original .youtube { position: relative; width: 50%; height: 0; padding-bottom: 56.25%;} 
-    main .original iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+    main .original .youtube {width: 30rem; height: 16rem;} 
     main .original .textbox { display: flex; flex-flow: column; flex-basis: 30%; } 
     main .original .textbox li { display: block; width: 30rem; height: 5rem; margin: 0rem 0; border-bottom: 3px solid white; text-align: left; position: relative;} 
     main .original .textbox li span{position: absolute; display: inline-block; right: 2rem; bottom: 2rem;}
