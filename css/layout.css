@@ -80,8 +80,8 @@ main .creators .t2,.b2 { transform: translateY(3rem); }
 section:nth-child(3) { height: auto; } 
 main .original .o_content { display: flex; justify-content: space-evenly; align-items: center; margin-top: 7rem; } 
 main .original h2 { margin-top: 2rem; font-weight: 900; font-size: 3rem; margin-bottom: 10rem; } 
-main .original .youtube { width: 50rem; height: 30rem; } 
-main .original .textbox { display: flex; flex-flow: column; } 
+main .original .youtube {flex-basis: 50%;} 
+main .original .textbox { display: flex; flex-flow: column; flex-basis: 30%; } 
 main .original .textbox li { display: block; width: 35rem; height: 5rem; margin: 0rem 0; border-bottom: 3px solid white; text-align: left; position: relative;} 
 main .original .textbox li span{position: absolute; display: inline-block; right: 2rem; bottom: 2rem;}
 main .original .textbox li a { line-height: 5rem; font-size: 130%;} 
