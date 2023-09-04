@@ -32,7 +32,7 @@ header .header_wrap .menu_btn a { color: white; }
 .dep2 { display: flex; justify-content: center; align-items: center; opacity: 0; max-height: 0; overflow: hidden; transition: all .5s ease-in-out;} 
 .dep2 li { padding: 1rem 2rem; } 
 .dep2 li a { font-weight: 700; font-size: 120%; } 
-.dep1 li:hover > .w100 > .dep2 {opacity: 1; max-height: 500px} 
+.dep1 li:hover > .w100 > .dep2 {opacity: 1; max-height: 100vh} 
 /* 메뉴 버튼 클릭 시 전체 화면 메뉴 표시 */
 .menu_btn.gnb.active ~ .nav { display:block; /* active 클래스가 추가되면 보이게 함 */ } 
 .menu_btn:hover { cursor: pointer; } 
@@ -145,7 +145,7 @@ footer .f_bot .family_btn span { line-height: 150%; }
     .menu_btn.gnb.active ~ .nav { display:block; /* active 클래스가 추가되면 보이게 함 */ } 
     .menu_btn:hover { cursor: pointer; } 
     /* 첫 번째 수준의 목록에 호버하면 두 번째 수준의 목록 표시 */
-    .nav_icons{position: absolute; top: 85%; left: 50%; ;display: flex; flex-direction: row;}
+    .nav_icons{position: absolute; top: 30%; left: 10%; ;display: flex; flex-direction: row;}
     .nav_icons .fa-brands{font-size: 40%; opacity: 80%;}
     .nav_icons a{margin-right: 1rem; color: var(--accent); }
 
@@ -204,11 +204,19 @@ footer .f_bot .family_btn span { line-height: 150%; }
     footer .f_top .copyright { color: gray; font-weight: normal; font-size: 80%; margin-top: .5rem; } 
     footer .f_bot  { position: static;display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center;} 
     footer .f_bot li { list-style: none; } 
-    footer .f_bot .f_links {order: 1; text-align: left; line-height: 2rem;} 
+    footer .f_bot .f_links {order: 1; text-align: left; line-height: 2rem; } 
     footer .f_bot .f_sns {order: 1; text-align: left; line-height: 2rem; margin-left: 2rem; justify-content: space-evenly; align-items: center;} 
     footer .f_bot .f_dep1{order: 0; width: 23rem;justify-content: center; align-items: center; border-bottom: 2px solid var(--secondary_g);}
     footer .f_bot .family_btn { position: static; text-align: center; border:none; padding-bottom: .7rem; line-height: 0; transition: all .5s ease-in-out; } 
     footer .f_bot .family_btn span { line-height: 150%; color: #ffffffb5;} 
+    /* hover */
+.f_dep1 { list-style: none; position: relative; } 
+.f_dep1 li { padding: 10px; } 
+.f_dep2 li { border: 2px solid var(--secondary_g); } 
+.f_dep2 li a { color: var(--secondary_g); } 
+.f_dep1 .f_dep2 { position: absolute; top: 51px; left: 33px; opacity: 0; visibility: hidden; transition: all 0.3s ease; } 
+.f_dep1 li:hover > .f_dep2 { opacity: 1; visibility: visible; } 
+.f_dep2 li { width: 9.2rem; position :relative; } 
     
 }
 
@@ -217,6 +225,9 @@ footer .f_bot .family_btn span { line-height: 150%; }
 @media screen and (min-width:768px) {
     /* popup */
     .popup{width: 35rem; left: 10%;}
+    
+    /* nav */
+    .nav_icons{position: absolute; top: 40%; left: 5%; ;display: flex; flex-direction: row;}
 
     /* main_business */
     main .business li { display: block; flex-wrap: wrap; justify-content: center; align-items: center; position: relative; } 
@@ -253,20 +264,23 @@ footer .f_bot .family_btn span { line-height: 150%; }
     main .original .textbox li a { line-height: 5rem; font-size: 100%; padding-left: 2rem;} 
 
     /* footer */
-    footer { height: 20rem;  display: flex; flex-direction: column; margin: auto; justify-content: center; align-items: center; } 
+    footer { height: 15rem;  display: flex; flex-direction: column; margin: auto; justify-content: center; align-items: center; } 
     footer .f_info {display: flex; flex-direction: row; justify-content: center; align-items: center; width: 100%;}
     .f_links a, .f_sns a { font-weight: 500; font-size: .8rem; color: #ffffffb5; } 
-    footer .f_top {position: static; order: 0; font-weight: 500; justify-content: center; align-items: center; width: 30rem;} 
+    footer .f_top {position: static; order: 0; font-weight: 500; justify-content: center; align-items: center; width: 30rem; margin-top: 3rem;} 
     footer .f_top .email { padding: .5rem; padding-bottom: 1rem;  } 
     footer .f_top .email:before { content: ''; display: block; position: absolute; background: var(--accent); width: 18rem; height: .1rem; top: 50%; left: .5rem; transform: translateY(.8rem); } 
     footer .f_top .copyright { color: gray; font-weight: normal; font-size: 80%; margin-top: .5rem; } 
-    footer .f_bot  { position: static;display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center;} 
+    footer .f_bot  {margin-top: 9rem; position: static;display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center;} 
     footer .f_bot li { list-style: none; } 
+    .f_links,.f_sns{padding-top: 2rem;}
     footer .f_bot .f_links {order:1 ; text-align: left; line-height: 2rem;} 
     footer .f_bot .f_sns {order: 1; text-align: left; line-height: 2rem; margin-left: 1rem; justify-content: space-evenly; align-items: center;} 
-    footer .f_bot .f_dep1{justify-content: center; align-items: center; border-bottom: 2px solid var(--secondary_g);}
+    footer .f_bot .f_dep1{justify-content: center; align-items: center; border: 2px solid var(--secondary_g); width: 20rem; }
     footer .f_bot .family_btn { position: static; text-align: center; border:none; padding-bottom: .7rem; line-height: 0; transition: all .5s ease-in-out; } 
     footer .f_bot .family_btn span { line-height: 150%; color: #ffffffb5;} 
+    footer .f_dep2{justify-content: center; align-items: center; text-align: center;}
+    footer .f_dep2 li{text-align: center; padding: 1rem; width: 100%;}
     
 }
 
