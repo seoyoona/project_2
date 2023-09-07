@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
@@ -36,7 +37,10 @@
                             <li class="lan en"><a href="#">EN</a></li>
                         </ul>                       
                         <ul class="menu_btn gnb">
-                            <li><span class="material-symbols-outlined">menu</span></li>
+                            <li>
+                                <span class="material-symbols-outlined m_default">menu</span>
+                                <!-- <span class="material-symbols-outlined m_hover">deployed_code</span> -->
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -219,26 +223,9 @@
             </div>
         </footer>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="../jquery.fitvids.js"></script>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-    var menuButton = document.querySelector('.menu_btn.gnb');
-    var nav = document.querySelector('.nav');
-
-    menuButton.addEventListener('click', function() {
-        nav.classList.toggle('active');
-        document.querySelector('.header .header_wrap').style.display = 
-            (nav.classList.contains('active')) ? 'block' : 'none';});
-    });
-    const closeBtn = document.querySelector('.close_btn');
-        const popup = document.querySelector('.popup');
-
-        closeBtn.addEventListener('click', () => {
-          popup.style.display = 'none';
-        });
-        $('#background-video').fitVids();
-    </script>
-
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="./basic.js"></script>
 </body>
 </html>

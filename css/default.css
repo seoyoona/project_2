@@ -43,8 +43,11 @@ header .header_wrap .menu_btn a {color: white;}
 .dep1 li:hover>.w100>.dep2 { opacity: 1; max-height: 100vh;}
 
 /* 메뉴 버튼 클릭 시 전체 화면 메뉴 표시 */
+.menu_btn{transition: rotate .3s ease;}
 .menu_btn.gnb.active~.nav {display: block;}
-.menu_btn:hover { cursor: pointer;}
+.menu_btn:hover { cursor: pointer; rotate: 45deg;}
+/* .m_hover{display: none;} */
+
 
 /* 첫 번째 수준의 목록에 호버하면 두 번째 수준의 목록 표시 */
 .nav_icons { position: absolute; left: 0; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column;}
@@ -66,7 +69,7 @@ main {height: auto;}
 section:nth-child(1) { height: auto; width: 100%; margin-bottom: 5rem;}
 main .business {overflow: hidden;}
 main .business h2 { margin-top: 5rem; font-weight: 900; font-size: 3rem;}
-main .business li { display: flex; flex-flow: wrap row; justify-content: space-between; align-items: center; position: relative;}
+main .business li { display: flex; flex-wrap:wrap; justify-content: space-between; align-items: center; position: relative;}
 main .business .b_box { display: inline-block; margin-top: 10rem; padding: 0 2rem;}
 main .business .b_box:nth-child(4) {transform: translateY(-17rem);}
 .b_box:before { content: 'Creator Partnership'; display: block; position: absolute; bottom: 5rem; left: -3rem; transform: rotate(-90deg);}
@@ -845,7 +848,7 @@ footer .f_bot .family_btn span {line-height: 150%;}
         width: 18rem;
         height: 0.1rem;
         top: 50%;
-        left: 0.5rem;
+        left: 6rem;
         transform: translateY(0.8rem);
     }
 
