@@ -8,12 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.header .header_wrap').style.display = 
             (nav.classList.contains('active')) ? 'block' : 'none';});
     });
-    const closeBtn = document.querySelector('.close_btn');
-        const popup = document.querySelector('.popup');
-
-        closeBtn.addEventListener('click', () => {
-          popup.style.display = 'none';
-        });
+const closeBtn = document.querySelector('.close_btn');
+  const popup = document.querySelector('.popup');
+  closeBtn.addEventListener('click', () => {
+    popup.style.display = 'none';
+  });
 // bg
 $(document).ready(function(){
 
