@@ -578,7 +578,11 @@ section.creators:hover .c_box::before{transform: translateY(-100%) scaleY(0); op
  footer .f_bot .family_btn span { line-height: 150%; } 
 
  .f_bot .family_btn:hover .f_dep2>li { display: block; } 
+
+ .f_dep1 { display: block; } 
+
  }
+
 
 /* PC (1440px) */
 @media screen and (min-width: 1440px) {
