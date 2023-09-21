@@ -30,8 +30,10 @@ header .header_wrap .menu_btn { position: absolute; right: 2rem; }
 header .header_wrap .menu_btn a { color: white; } 
 
 /* nav */
-.nav { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; } 
-.nav.active { display: block; z-index: 999999; } 
+
+.nav { display: none; position: fixed; top: 0; right: 0; width: 100%; height: 100%; background-color: #000; margin: auto; justify-content: center; align-items: center; } 
+.nav.active { display: block; z-index: 9999999999999999999; margin: auto; }
+.nav.active .overlay{display: block;}
 .dep1,.dep2 { list-style-type: none; } 
 .dep1 { margin-top: 3rem; } 
 .dep1 li { padding: 1rem 2rem; } 
@@ -42,6 +44,7 @@ header .header_wrap .menu_btn a { color: white; }
 .dep2 li a { font-weight: 700; font-size: 120%; } 
 .dep1 li:hover>.w100>.dep2 { opacity: 1; max-height: 100vh; } 
 .lang.cube,.menu_btn.cube { margin-right: 1rem; } 
+.overlay{display: none; background: rgba(0,0,0); position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index:-1;}
 
 .nav .header_top { width: 100%; max-width: 1440px; height: auto; position: relative; margin: auto; justify-content: center; align-items: center; } 
 .nav .header_wrap { height: 5rem; width: 100%; display: flex; justify-content: space-between; align-items: center; z-index: 99999; } 
@@ -71,9 +74,9 @@ header .header_wrap .menu_btn a { color: white; }
 .nav_icons a { margin-right: 1rem; color: var(--accent); } 
 
 /* bg */
-header { position: relative; } 
-
-.header_top { width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center; } 
+header{position: relative;}
+.bg{width: 100%; height: 60rem;}
+.header_top { width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center; z-index: 999999;} 
 .background { position: relative; width: 100vw; overflow: hidden; } 
 .bg_textbox { position: absolute; bottom: 10rem; left: 50%; transform: translateX(-40rem); z-index: 1; } 
 .bg_textbox .bg_txt span { font-size: 120%; letter-spacing: -.5px; } 

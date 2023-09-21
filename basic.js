@@ -1,18 +1,22 @@
-// popup
+// nav
 document.addEventListener('DOMContentLoaded', function() {
     var menuButton = document.querySelector('.menu_btn.gnb');
     var nav = document.querySelector('.nav');
+    var overlay = document.querySelector('.overlay');
 
     menuButton.addEventListener('click', function() {
         nav.classList.toggle('active');
-        document.querySelector('.header .header_wrap').style.display = 
-            (nav.classList.contains('active')) ? 'block' : 'none';});
-    });
+
+    })});
+
+  // popup
 const closeBtn = document.querySelector('.close_btn');
   const popup = document.querySelector('.popup');
   closeBtn.addEventListener('click', () => {
     popup.style.display = 'none';
   });
+
+
 // bg
 $(document).ready(function(){
 
