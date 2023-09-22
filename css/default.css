@@ -86,11 +86,12 @@ main { height: auto; }
 
 /* business */
 section:nth-child(1) { height: auto; width: 100%; margin-bottom: 5rem; } 
-main .business {justify-content: center; align-items: center;} 
-main .business .b_content { transition: transform .5s ease-in-out; display: flex; display:flex; overflow-y :auto; width: max-content; } 
+main .business {justify-content: center; align-items: center; overflow: hidden;} 
+main .business .b_content { transition: transform .5s ease-in-out; display: flex; } 
 main .business h2 { margin-top: 5rem; font-weight: 900; font-size: 3rem; } 
 main .business li { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; position: relative; } 
-main .business .b_box { display: inline-block; margin-top: -10rem; padding: 0; } 
+main .business .b_box { display: inline-block; margin-top: -10rem; padding: 0; flex: 0 0 auto; }
+main .business .b_content span{font-size: 5rem; font-weight: 900; display: inline-block; transform: translateX(-8rem) translateY(-3rem); } 
 main .business .b_box:nth-child(4) { transform: translateY(-17rem); } 
 .b_box:before { content: 'Creator Partnership'; display: block; position: absolute; bottom: 5rem; left: -3rem; transform: rotate(-90deg); } 
 .b_box:nth-child(2)::before { content: 'Marketing Solutions'; display: block; position: absolute; bottom:35rem; left: -3rem; transform: rotate(-90deg); } 
@@ -98,11 +99,11 @@ main .business .b_box:nth-child(4) { transform: translateY(-17rem); }
 .b_box:nth-child(4)::before { content: 'Production'; display: block; position: absolute; bottom: 35rem; left: -1rem; transform: rotate(-90deg); } 
 .b_box:nth-child(5)::before { content: 'GAME·WEB3'; display: block; position: absolute; bottom: 5rem; left: -2rem; transform: rotate(-90deg); } 
 .b_box:after { content: ''; display: block; position: absolute; top: 0; right: -4rem; font-size: 900%; font-weight: 900; opacity: 0.4; } 
-.b_box:nth-child(1):after { content: '01'; display: block; position: absolute; top: 0; right: -4rem; font-size: 900%; font-weight: 900; opacity: 0.4; } 
-.b_box:nth-child(2):after { content: '02'; display: block; position: absolute; top: 0; right: -4rem; font-size: 900%; font-weight: 900; opacity: 0.4; } 
-.b_box:nth-child(3):after { content: '03'; display: block; position: absolute; top: 0; right: -4rem; font-size: 900%; font-weight: 900; opacity: 0.4; } 
-.b_box:nth-child(4):after { content: '04'; display: block; position: absolute; top: 0; right: -4rem; font-size: 900%; font-weight: 900; opacity: 0.4; } 
-.b_box:nth-child(5):after { content: '05'; display: block; position: absolute; top: 0; right: -4rem; font-size: 900%; font-weight: 900; opacity: 0.4; } 
+.b_box:nth-child(1):after { content: '01'; display: block; position: absolute; top: 0; right: 35rem; font-size: 900%; font-weight: 900; opacity: 0.4; } 
+.b_box:nth-child(2):after { content: '02'; display: block; position: absolute; top: 0; left: 18rem; font-size: 900%; font-weight: 900; opacity: 0.4; } 
+.b_box:nth-child(3):after { content: '03'; display: block; position: absolute; top: 0; left: 35rem; font-size: 900%; font-weight: 900; opacity: 0.4; } 
+.b_box:nth-child(4):after { content: '04'; display: block; position: absolute; top: 0; left: 35rem; font-size: 900%; font-weight: 900; opacity: 0.4; } 
+.b_box:nth-child(5):after { content: '05'; display: block; position: absolute; top: 0; left: 35rem; font-size: 900%; font-weight: 900; opacity: 0.4; } 
 
 /* creators */
 section:nth-child(2) { height: auto; } 
@@ -128,7 +129,8 @@ main .original .o_content { display: flex; justify-content: space-evenly; align-
 main .original h2 { margin-top: 2rem; font-weight: 900; font-size: 3rem; margin-bottom: 10rem; } 
 main .original .youtube { flex-basis: 50%; } 
 main .original .textbox { display: flex; flex-flow: column; flex-basis: 30%; } 
-main .original .textbox li { display: block; width: 35rem; height: 5rem; margin: 0rem 0; border-bottom: 3px solid white; text-align: left; position: relative; } 
+main .original .textbox li { display: block; width: 35rem; height: 5rem; margin: 0rem 0; border-bottom: 3px solid white; text-align: left; position: relative; opacity: .5; } 
+main .original .textbox li:hover { opacity:1; } 
 main .original .textbox li span { position: absolute; display: inline-block; right: 2rem; bottom: 2rem; } 
 main .original .textbox li a { line-height: 5rem; font-size: 130%; } 
 .more { position: relative; margin-top: 4rem; } 
@@ -218,7 +220,7 @@ footer .f_bot .family_btn span { line-height: 150%; }
  .popup { width: 20rem; left: 3%; } 
 
  /* main_business */
- main .business li { display: block; flex-wrap: wrap; justify-content: center; align-items: center; position: relative; } 
+ main .business li {  flex-wrap: wrap; justify-content: center; align-items: center; position: relative; } 
 
  main .business .b_box { display: inline-block; margin-top: 10rem; padding: 0 2rem; } 
 
