@@ -75,7 +75,7 @@ header .header_wrap .menu_btn a { color: white; }
 
 /* bg */
 header{position: relative;}
-.bg{width: 100%; height: 60rem;}
+.bg{width: 100%; height: 100vh;}
 .header_top { width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center; z-index: 999999;} 
 .background { position: relative; width: 100vw; overflow: hidden; } 
 .bg_textbox { position: absolute; bottom: 10rem; left: 50%; transform: translateX(-40rem); z-index: 1; } 
@@ -164,86 +164,71 @@ footer .f_bot .family_btn span { line-height: 150%; }
 .f_dep2 li { width: 9.2rem; position: relative; } 
 
 /* MOBILE (375px) */
-@media screen and (min-width: 375px) { /* header */
+@media screen and (min-width: 375px) { 
+    /* header */
  header .header_wrap .logo img { height: 2rem; } 
-
  header .header_wrap .lang { position: absolute; right: 5rem; } 
-
  header .header_wrap .lang .ko:before { display: block; content: ''; position: absolute; background-color: rgba(255, 255, 255, 0.4); width: 25px; height: 1px; top: 59px; right: 20px; } 
-
  header .header_wrap .lang .en { padding-left: 30px; } 
+
 
  /* nav */
  .nav { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; } 
-
  .nav.active { display: block; width: 100vw; height: 100vh; background-color: #000; } 
-
- .dep1,
- .dep2 { list-style-type: none; } 
-
+ .dep1,.dep2 { list-style-type: none; } 
  .dep1 { margin-top: 1rem; text-align: left; } 
-
  .dep1 li { padding: 1rem 2rem; } 
-
  .dep1 li a { font-weight: 800; font-size: 2rem; } 
-
  .dep1 li span { margin-right: 0.6rem; font-size: 40%; vertical-align: top; } 
-
  .dep2 { display: flex; flex-direction: column; justify-content: left; align-items: flex-start; opacity: 0; max-height: 0; overflow: hidden; transition: all 0.5s ease-in-out; } 
-
  .dep2 li { padding: 0.3rem 0.5rem; text-align: left; } 
-
  .dep2 li a { font-weight: 700; font-size: 0.8rem; text-align: left; } 
-
  .dep1 li:hover>.w100>.dep2 { opacity: 1; max-height: 500px; } 
 
  /* 메뉴 버튼 클릭 시 전체 화면 메뉴 표시 */
  .menu_btn.gnb.active~.nav { display: block; /* active 클래스가 추가되면 보이게 함 */ } 
-
  .menu_btn:hover { cursor: pointer; } 
 
  /* 첫 번째 수준의 목록에 호버하면 두 번째 수준의 목록 표시 */
  .nav_icons { position: absolute; top: 50%; left: 10%; display: flex; flex-direction: row; } 
-
  .nav_icons .fa-brands { font-size: 40%; opacity: 80%; } 
-
  .nav_icons a { margin-right: 1rem; color: var(--accent); } 
 
  /* bg */
  .bg_textbox .container { position: relative; } 
-
  .bg_textbox { position: absolute; top: 80%; left: 41rem; width: 15rem; z-index: 9999999; } 
-
  .bg_textbox .bg_txt span { font-size: 1.5rem; } 
 
  /* popup */
  .popup { width: 20rem; left: 3%; } 
 
  /* main_business */
- main .business li {  flex-wrap: wrap; justify-content: center; align-items: center; position: relative; } 
-
- main .business .b_box { display: inline-block; margin-top: 10rem; padding: 0 2rem; } 
-
+ main .business .b_content { flex-direction: column;} 
+ main .business li { flex-wrap: wrap; justify-content: center; align-items: center; position: relative; }  main .business .b_box { display: inline-block; margin-top: 10rem; padding: 0 2rem; } 
  main .business .b_box:nth-child(4) { transform: translateY(0); } 
-
  main .business .b_box img { width: 18rem; } 
-
- .b_box:after { content: '01'; display: block; position: absolute; top: 0; right: -4rem; font-size: 900%; font-weight: 900; opacity: 0.4; transform: translateY(13rem) translateX(-4rem); } 
-
- .b_box:nth-child(2)::after { position: absolute; top: 0; right: -4rem; font-size: 900%; font-weight: 900; opacity: 0.4; transform: translateY(5rem) translateX(-4rem); } 
-
- .b_box:nth-child(4)::after { position: absolute; top: 0; right: -4rem; font-size: 900%; font-weight: 900; opacity: 0.4; transform: translateY(5rem) translateX(-4rem); } 
-
- .b_box:nth-child(5)::after { position: absolute; top: 0; right: -4rem; font-size: 900%; font-weight: 900; opacity: 0.4; transform: translateX(-18rem) translateY(-4rem); } 
+ main .business .b_content span{width: 25rem; font-size: 2rem; font-weight: 900; display: inline-block; transform: translateX(0rem) translateY(0); } 
+ main .business .b_box:nth-child(4) { transform: translateY(0rem); } 
+ .b_box:before { content: 'Creator Partnership'; display: block; position: absolute; bottom: 5rem; left: -3rem; transform: rotate(-90deg); } 
+ .b_box:nth-child(2)::before { content: 'Marketing Solutions'; display: block; position: absolute; bottom:35rem; left: -3rem; transform: rotate(-90deg); } 
+ .b_box:nth-child(3)::before { content: 'Intellectual Property'; display: block; position: absolute; bottom: 5rem; left: -3rem; transform: rotate(-90deg); } 
+ .b_box:nth-child(4)::before { content: 'Production'; display: block; position: absolute; bottom: 5rem; left: -1rem; transform: rotate(-90deg); } 
+ .b_box:nth-child(5)::before { content: 'GAME·WEB3'; display: block; position: absolute; bottom: 5rem; left: -1rem; transform: rotate(-90deg); } 
+ .b_box:after { content: ''; display: block; position: absolute; top: 0; right: -4rem; font-size: 900%; font-weight: 900; opacity: 0.4; } 
+ .b_box:nth-child(1):after { content: '01'; display: block; position: absolute; top: 0; right: 0rem; font-size: 900%; font-weight: 900; opacity: 0.4; } 
+ .b_box:nth-child(2):after { content: '02'; display: block; position: absolute; top: 0; left: 8rem; font-size: 900%; font-weight: 900; opacity: 0.4; } 
+ .b_box:nth-child(3):after { content: '03'; display: block; position: absolute; top: 0; left: 8rem; font-size: 900%; font-weight: 900; opacity: 0.4; } 
+ .b_box:nth-child(4):after { content: '04'; display: block; position: absolute; top: 0; left: 8rem; font-size: 900%; font-weight: 900; opacity: 0.4; } 
+ .b_box:nth-child(5):after { content: '05'; display: block; position: absolute; top: 0; left: 8rem; font-size: 900%; font-weight: 900; opacity: 0.4; } 
 
  /* main_creators */
- main .creators ul { display: flex; flex-direction: row; justify-content: space-between; flex-wrap: wrap; margin-left: 1rem; margin-right: 1rem; } 
+ main .creators ul { display: flex; flex-direction: column; justify-content: space-between; flex-wrap: wrap; margin-left: 1rem; margin-right: 1rem; } 
 
- main .creators .c_box { flex-basis: calc(50% - 1rem); margin-bottom: 1rem; } 
+ main .creators .c_box { margin-bottom: 1rem; } 
 
- main .creators .top .c_box { width: 6rem; height: 15rem; margin: 1rem 0rem; margin-right: 1rem; background: var(--primary); background: no-repeat center center; } 
+ main .creators .top .c_box { width: 20rem; margin: 1rem 0rem;  background: var(--primary); background: no-repeat center center; } 
 
- main .creators .bot .c_box { width: 6rem; height: 15rem; margin: 1rem 0rem; margin-right: 1rem; background: var(--primary); background: no-repeat center center; } 
+ main .creators .bot .c_box { width: 20rem; margin: 1rem 0rem; background: var(--primary); background: no-repeat center center; } 
 
  /* main .creators .bot .c_content .b3 { transform: translatex(10.5rem) translateY(-34rem); } */
 
@@ -336,15 +321,22 @@ footer .f_bot .family_btn span { line-height: 150%; }
 
  main .business .b_box:nth-child(4) { transform: translateY(0); } 
 
- main .business .b_box img { width: 18rem; } 
+ main .business .b_box img { width: 21rem; } 
 
- .b_box:after { content: '01'; display: block; position: absolute; top: 0; right: -4rem; font-size: 900%; font-weight: 900; opacity: 0.4; transform: translateY(13rem) translateX(-4rem); } 
-
- .b_box:nth-child(2)::after { position: absolute; top: 0; right: -4rem; font-size: 900%; font-weight: 900; opacity: 0.4; transform: translateY(5rem) translateX(-4rem); } 
-
- .b_box:nth-child(4)::after { position: absolute; top: 0; right: -4rem; font-size: 900%; font-weight: 900; opacity: 0.4; transform: translateY(5rem) translateX(-4rem); } 
-
- .b_box:nth-child(5)::after { position: absolute; top: 0; right: -4rem; font-size: 900%; font-weight: 900; opacity: 0.4; transform: translateX(-18rem) translateY(-4rem); } 
+ main .business .b_content span{width: 22rem; font-size: 4rem; font-weight: 900; display: inline-block; transform: translateX(0rem) translateY(0); } 
+ main .business .b_content li:nth-of-type(1) span{width: 20rem; font-size: 4rem; font-weight: 900; display: inline-block; transform: translateX(0rem) translateY(0); } 
+ main .business .b_box:nth-child(4) { transform: translateY(0rem); } 
+ .b_box:before { content: 'Creator Partnership'; display: block; position: absolute; bottom: 50%; left: -2rem; transform: rotate(-90deg); } 
+ .b_box:nth-child(2)::before { content: 'Marketing Solutions'; display: block; position: absolute; bottom: 50%; left: -3rem; transform: rotate(-90deg); } 
+ .b_box:nth-child(3)::before { content: 'Intellectual Property'; display: block; position: absolute; bottom: 50%; left: -3rem; transform: rotate(-90deg); } 
+ .b_box:nth-child(4)::before { content: 'Production'; display: block; position: absolute; bottom: 50%; left: -1rem; transform: rotate(-90deg); } 
+ .b_box:nth-child(5)::before { content: 'GAME·WEB3'; display: block; position: absolute; bottom: 50%; left: -1rem; transform: rotate(-90deg); } 
+ .b_box:after { content: ''; display: block; position: absolute; top: 0; right: -4rem; font-size: 900%; font-weight: 900; opacity: 0.4; } 
+ .b_box:nth-child(1):after { content: '01'; display: block; position: absolute; top: 0; left: 5rem; font-size: 900%; font-weight: 900; opacity: 0.4; } 
+ .b_box:nth-child(2):after { content: '02'; display: block; position: absolute; bottom: 0; right: 0; font-size: 900%; font-weight: 900; opacity: 0.4; } 
+ .b_box:nth-child(3):after { content: '03'; display: block; position: absolute; top: 8rem; right: 0; font-size: 900%; font-weight: 900; opacity: 0.4; } 
+ .b_box:nth-child(4):after { content: '04'; display: block; position: absolute; top: 0; right: 0; font-size: 900%; font-weight: 900; opacity: 0.4; } 
+ .b_box:nth-child(5):after { content: '05'; display: block; position: absolute; top: 10rem; right: 0; font-size: 900%; font-weight: 900; opacity: 0.4; } 
 
  /* main_creators */
  main .creators ul { display: flex; flex-direction: row; justify-content: space-between; flex-wrap: nowrap; margin-left: 1rem; margin-right: 1rem; } 
@@ -422,11 +414,13 @@ footer .f_bot .family_btn span { line-height: 150%; }
 
 /* LAPTOP (990PX) */
 @media screen and (min-width: 992px){
+
  .f_dep1 { display: none; } 
  }
 
 /* PC (1024px) */
-@media screen and (min-width: 1024px) { /* header */
+@media screen and (min-width: 1024px) { 
+    /* header */
  .popup { width: 40rem; left: 25%; } 
 
  /* bg */
@@ -474,12 +468,24 @@ footer .f_bot .family_btn span { line-height: 150%; }
  .nav_icons a { margin-right: 1rem; color: var(--accent); } 
 
  /* main_business */
- 
+ main .business .b_content { flex-direction: row;} 
  main .business li { display: block; flex-wrap: wrap; justify-content: center; align-items: center; position: relative; } 
  .b_content { display: flex; width: max-content; } 
 
  main .business .b_box { display: inline-block; margin-top: 10rem; padding: 0 2rem; flex-shrink: 0; } 
-
+ main .business .b_content span{font-size: 5rem; font-weight: 900; display: inline-block; transform: translateX(-8rem) translateY(-3rem); } 
+ main .business .b_box:nth-child(4) { transform: translateY(-17rem); } 
+ .b_box:before { content: 'Creator Partnership'; display: block; position: absolute; bottom: 5rem; left: -3rem; transform: rotate(-90deg); } 
+ .b_box:nth-child(2)::before { content: 'Marketing Solutions'; display: block; position: absolute; bottom:35rem; left: -3rem; transform: rotate(-90deg); } 
+ .b_box:nth-child(3)::before { content: 'Intellectual Property'; display: block; position: absolute; bottom: 5rem; left: -3rem; transform: rotate(-90deg); } 
+ .b_box:nth-child(4)::before { content: 'Production'; display: block; position: absolute; bottom: 35rem; left: -1rem; transform: rotate(-90deg); } 
+ .b_box:nth-child(5)::before { content: 'GAME·WEB3'; display: block; position: absolute; bottom: 5rem; left: -2rem; transform: rotate(-90deg); } 
+ .b_box:after { content: ''; display: block; position: absolute; top: 0; right: -4rem; font-size: 900%; font-weight: 900; opacity: 0.4; } 
+ .b_box:nth-child(1):after { content: '01'; display: block; position: absolute; top: 0; right: 35rem; font-size: 900%; font-weight: 900; opacity: 0.4; } 
+ .b_box:nth-child(2):after { content: '02'; display: block; position: absolute; top: 0; left: 18rem; font-size: 900%; font-weight: 900; opacity: 0.4; } 
+ .b_box:nth-child(3):after { content: '03'; display: block; position: absolute; top: 0; left: 35rem; font-size: 900%; font-weight: 900; opacity: 0.4; } 
+ .b_box:nth-child(4):after { content: '04'; display: block; position: absolute; top: 0; left: 35rem; font-size: 900%; font-weight: 900; opacity: 0.4; } 
+ .b_box:nth-child(5):after { content: '05'; display: block; position: absolute; top: 0; left: 35rem; font-size: 900%; font-weight: 900; opacity: 0.4; }  
  main .business .b_box:nth-child(4) { transform: translateY(0); } 
 
  main .business .b_box img { width: 40rem; } 
