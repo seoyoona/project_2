@@ -12,6 +12,8 @@ header { margin: auto; justify-content: center; align-items: center; position: r
 .bg_textbox .bg_txt span { font-size: 120%; } 
 .bg .container { position: relative; width: 100%; max-width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; } 
 
+.goToTopBtn{position: fixed; bottom: 3rem; right: 3rem; width: 4rem; height: 4rem; border: 2px solid #fff; border-radius: 100%; font-size: 2rem; line-height: 4rem; opacity: 70%; cursor: pointer; transition: all .3s ease; }
+
 .popup { width: 35rem; height: auto; position: fixed; background: rgba(0, 0, 0, 0.5); top: 10rem; left: 40%; z-index: 9999999999999999; border-radius: 1.25rem; } 
 .popup .close_btn { position: absolute; right: 0; padding: 1rem; cursor: pointer; } 
 .popup p { padding-top: 3rem; padding-bottom: 2rem; padding-left: 1rem; padding-right: 3rem; font-size: 110%; line-height: 150%; } 
@@ -311,6 +313,7 @@ footer .f_bot .family_btn span { line-height: 150%; }
 
 @media screen and (min-width: 768px) { /* popup */
  .popup { width: 35rem; left: 10%; } 
+
 
  /* nav */
  .nav_icons { position: absolute; top: 55%; left: 5%; display: flex; flex-direction: row; } 

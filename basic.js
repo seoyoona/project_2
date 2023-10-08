@@ -16,6 +16,20 @@ const closeBtn = document.querySelector('.close_btn');
     popup.style.display = 'none';
   });
 
+// topBtn
+
+// document.querySelectorAll('a.smooth-scroll').forEach((link) => {
+//   link.addEventListener('click', function(e) {
+//       e.preventDefault();
+
+//       let anchor = this.getAttribute('href');
+
+//       document.querySelector(anchor).scrollIntoView({
+//           behavior: 'smooth'
+//       });
+//   });
+// });
+
 
 // bg
 $(document).ready(function(){
@@ -60,3 +74,4 @@ window.addEventListener('scroll', function(e) {
       ticking = true;
    }
 });
+
