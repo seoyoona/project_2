@@ -16,7 +16,6 @@ const closeBtn = document.querySelector('.close_btn');
     popup.style.display = 'none';
   });
 
-// topBtn
 
 // go-top
 $(function () {
@@ -240,3 +239,30 @@ $(window).on('scroll', () => {
 		}
 	});
 });
+
+// creators:hover cursor
+// window.onload 화면이 전부 로딩된 후 실행
+const cursor = document.querySelector('.c_title'); 
+
+cursor.addEventListener('mousemove',(e) => { 
+  cursor.style.left = `${e.clientX}px`; 
+  cursor.style.top = `${e.clientY}px`; 
+});
+
+// c_box::before
+// $(document).ready(function() {
+//   var creatorsTop = $('.creators').offset().top;
+//   var creatorsBottom = creatorsTop + $('.creators').height();
+
+//   $(window).scroll(function() {
+//       var scrollPos = $(window).scrollTop();
+
+//       if (scrollPos >= creatorsTop && scrollPos <= creatorsBottom) {
+//           // 스크롤 위치가 .creators 섹션 내부일 경우
+//           $('.c_box:before').css('transform', 'translateY(-100%)');
+//       } else {
+//           // 그 외의 경우
+//           $('.c_box:before').css('transform', 'translateY(0)%');
+//       }
+//   });
+// });
