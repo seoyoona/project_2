@@ -12,7 +12,7 @@ header { margin: auto; justify-content: center; align-items: center; position: r
 .bg_textbox .bg_txt span { font-size: 120%; } 
 .bg .container { position: relative; width: 100%; max-width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; } 
 
-.goToTopBtn{position: fixed; bottom: 3rem; right: 3rem; width: 4rem; height: 4rem; border: 2px solid #fff; border-radius: 100%; font-size: 2rem; line-height: 4rem; opacity: 70%; cursor: pointer; transition: all .3s ease; }
+.go-top{position: fixed; bottom: 3rem; right: 3rem; width: 4rem; height: 4rem; border: 2px solid #fff; border-radius: 100%; font-size: 2rem; line-height: 4rem; opacity: 70%; cursor: pointer; transition: all .3s ease; }
 
 .popup { width: 35rem; height: auto; position: fixed; background: rgba(0, 0, 0, 0.5); top: 10rem; left: 40%; z-index: 9999999999999999; border-radius: 1.25rem; } 
 .popup .close_btn { position: absolute; right: 0; padding: 1rem; cursor: pointer; } 
@@ -87,7 +87,7 @@ header{position: relative;}
 main { height: auto; } 
 
 /* business */
-section:nth-child(1) { height: auto; width: 100%; margin-bottom: 5rem; } 
+section:nth-child(1) { height: 80rem; width: 100%; margin-bottom: 5rem; } 
 main .business {justify-content: center; align-items: center; overflow: hidden;} 
 main .business .b_content { transition: transform .5s ease-in-out; display: flex; } 
 main .business h2 { margin-top: 5rem; font-weight: 900; font-size: 3rem; } 
@@ -207,6 +207,8 @@ footer .f_bot .family_btn span { line-height: 150%; }
  .popup { width: 20rem; left: 3%; } 
 
  /* main_business */
+ main section:nth-child(1){height: 160rem;}
+ main .business{height: auto;}
  main .business .b_content { flex-direction: column;} 
  main .business li { flex-wrap: wrap; justify-content: center; align-items: center; position: relative; }  main .business .b_box { display: inline-block; margin-top: 10rem; padding: 0 2rem; } 
  main .business .b_box:nth-child(4) { transform: translateY(0); } 
@@ -475,6 +477,7 @@ footer .f_bot .family_btn span { line-height: 150%; }
  .nav_icons a { margin-right: 1rem; color: var(--accent); } 
 
  /* main_business */
+ main section:nth-child(1){height: 80rem;}
  main .business .b_content { flex-direction: row;} 
  main .business li { display: block; flex-wrap: wrap; justify-content: center; align-items: center; position: relative; } 
  .b_content { display: flex; width: max-content; } 
@@ -610,13 +613,14 @@ section.creators:hover .c_box::before { transform: translateY(-100%) scaleY(0); 
  main .business .b_box:nth-child(4) { transform: translateY(0); } 
 
  main .business .b_box img { width: 40rem; } 
-
- .b_box:after { content: '01'; display: block; position: absolute; top: 0; right: -4rem; font-size: 900%; font-weight: 900; opacity: 0.4; transform: translateY(13rem) translateX(-4rem); } 
-
- .b_box:nth-child(2)::after { position: absolute; top: 0; right: -4rem; font-size: 900%; font-weight: 900; opacity: 0.4; transform: translateY(5rem) translateX(-4rem); } 
-
+ .b_box:before {left: 9%; bottom: 24rem;} 
+ .b_box:nth-child(2)::before {left: 8%; bottom: 41rem; } 
+ .b_box:nth-child(3)::before {left: 8%; bottom: 24rem;} 
+ .b_box:nth-child(4)::before {left: 10%; bottom: 39rem;} 
+ .b_box:nth-child(5)::before {left: 9%; bottom: 23rem;} 
+ .b_box:after { right: 0; font-size: 900%; font-weight: 900; opacity: 0.4; } 
+ .b_box:nth-child(2)::after { position: absolute; top: 0; right: -4rem; font-size: 900%; font-weight: 900; opacity: 0.4; transform: translateY(5rem) translateX(-4rem);  } 
  .b_box:nth-child(4)::after { position: absolute; top: 0; right: -4rem; font-size: 900%; font-weight: 900; opacity: 0.4; transform: translateY(5rem) translateX(-4rem); } 
-
  .b_box:nth-child(5)::after { position: absolute; top: 0; right: -4rem; font-size: 900%; font-weight: 900; opacity: 0.4; transform: translateX(-18rem) translateY(-4rem); } 
 
  /* main_creators */

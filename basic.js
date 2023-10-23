@@ -18,17 +18,23 @@ const closeBtn = document.querySelector('.close_btn');
 
 // topBtn
 
-// document.querySelectorAll('a.smooth-scroll').forEach((link) => {
-//   link.addEventListener('click', function(e) {
-//       e.preventDefault();
+// go-top
+$(function () {
+	// Show/hide the footer button
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 300) {
+			$('.go-top').fadeIn(200);
+		} else {
+			$('.go-top').fadeOut(200);
+		}
+	});
 
-//       let anchor = this.getAttribute('href');
-
-//       document.querySelector(anchor).scrollIntoView({
-//           behavior: 'smooth'
-//       });
-//   });
-// });
+	// Animate scrolling
+	$('.go-top').click(function (e) {
+		e.preventDefault();
+		$('html, body').animate({ scrollTop: 0 }, 500, 'easeOutQuart');
+	});
+});
 
 
 // bg
@@ -40,41 +46,130 @@ $(document).ready(function(){
 // business_slider
 
 
-let ticking = false;
-let horizontalScrollAmount = 0;
-function doSomething(scroll_pos) {
-  const bContent = document.querySelector('.b_content');
-  const bContentTop = bContent.offsetTop;
-  const bContentBottom = bContentTop + bContent.offsetHeight;
-  // .b_content 요소의 전체 너비 계산
-  let totalWidth = Array.from(bContent.children).reduce((acc, child) => acc + child.offsetWidth, 0);
-  // 현재 스크롤 위치가 .b_content 요소의 범위 내에 있는지 확인
-  if (scroll_pos >= bContentTop && scroll_pos <= (totalWidth + bContentTop)) {
-    // .b_content 요소 내에서는 가로로 움직임
-    horizontalScrollAmount += scroll_pos - (horizontalScrollAmount + bContentTop);
-    document.querySelector('.b_content').style.transform = `translateX(-${horizontalScrollAmount*10}px)`;
+// let ticking = false;
+// let horizontalScrollAmount = 0;
+// function doSomething(scroll_pos) {
+//   const bContent = document.querySelector('.b_content');
+//   const bContentTop = bContent.offsetTop;
+//   const bContentBottom = bContentTop + bContent.offsetHeight;
+//   // .b_content 요소의 전체 너비 계산
+//   let totalWidth = Array.from(bContent.children).reduce((acc, child) => acc + child.offsetWidth, 0);
+//   // 현재 스크롤 위치가 .b_content 요소의 범위 내에 있는지 확인
+//   if (scroll_pos >= bContentTop && scroll_pos <= (totalWidth + bContentTop)) {
+//     // .b_content 요소 내에서는 가로로 움직임
+//     horizontalScrollAmount += scroll_pos - (horizontalScrollAmount + bContentTop);
+//     document.querySelector('.b_content').style.transform = `translateX(-${horizontalScrollAmount*10}px)`;
     
-    window.scrollTo(0, scroll_pos);
+//     window.scrollTo(0, scroll_pos);
     
-   } else if (scroll_pos > (totalWidth + bContentTop)) {
-     // 마지막 아이템이 완전히 보일 때까지 수직 스크롤 막기
-     window.scrollTo(0, totalWidth + bContentTop);
-   } else {
-     // .b_content 요소 밖에서는 transform 속성 초기화 및 수직 스크롤 허용
-     document.querySelector('.b_content').style.transform = 'translateX(0)';
-   }
-}
-window.addEventListener('scroll', function(e) {
-   let last_known_scroll_position = window.scrollY;
-   if (!ticking && window.innerWidth >= 1024) { 
-      window.requestAnimationFrame(function() {
-        doSomething(last_known_scroll_position);
-        ticking = false;
-      });
-      ticking = true;
-   }
+//    } else if (scroll_pos > (totalWidth + bContentTop)) {
+//      // 마지막 아이템이 완전히 보일 때까지 수직 스크롤 막기
+//      window.scrollTo(0, totalWidth + bContentTop);
+//    } else {
+//      // .b_content 요소 밖에서는 transform 속성 초기화 및 수직 스크롤 허용
+//      document.querySelector('.b_content').style.transform = 'translateX(0)';
+//    }
+// }
+// window.addEventListener('scroll', function(e) {
+//    let last_known_scroll_position = window.scrollY;
+//    if (!ticking && window.innerWidth >= 1024) { 
+//       window.requestAnimationFrame(function() {
+//         doSomething(last_known_scroll_position);
+//         ticking = false;
+//       });
+//       ticking = true;
+//    }
 
    
+// });
+
+$(document).ready(function(){
+  let d_width = 0; // 브라우저 가로
+  let d_height = 0; // 문서 전체의 높이
+
+  function tmp() {
+      if($(window).width() >= 1024) {
+          // container의 가로사이즈(화면가로 * box 개수)
+          let con_width = $(window).outerWidth() * $('.b_box').length;
+
+          $('.b_content').css({
+              width: con_width,
+              height: '100vh',
+              position: 'absolute',
+              overflow : 'hidden',
+              left : 3,
+          });
+
+          $('.b_box').css({
+              width: 7000 /$('.b_box').length,
+              height: '100vh',
+              float: 'left'
+          });
+
+          $('body').css({
+              height: '100vh'
+          });
+
+          let w_width = $(window).width(); // 화면의 가로값
+          let w_height = $(window).height(); // 화면의 세로값
+
+          d_width = con_width - w_width; 
+      }
+      else{
+        $('.b_content').css({
+          position: 'static',
+          overflow : 'hidden',
+          left : 3,
+      });
+      }
+  }
+
+  tmp();
+
+  let array = [];
+  for(let i=0; i<$('.b_box').length; i++) {
+      array[i] = $('.b_box').eq(i).offset().left;
+  }
+
+  let chk = true;
+  
+  $('.b_box').on('mousewheel DOMMouseScroll', function(event){
+      if($(window).width() >= 1024) {
+          
+        if(chk) {
+
+            chk = false;
+            setTimeout(function(){
+                chk = true;
+            },500);
+
+            var delta=event.originalEvent.wheelDelta || -event.originalEvent.detail;
+
+            if(delta < 0 && $(this).next().length > 0) {
+                $('.b_content').animate({
+                    left: -array[$(this).index()+1]
+                },500);
+            } else if(delta > 0 && $(this).prev().length > 0) {
+                $('.b_content').animate({
+                    left:-array[$(this).index()-1]
+                },500);
+           }
+        }
+    }
+  });
+
+  $(window).resize(function(){
+      for(let i=0; i<$('.b_box').length; i++) {
+          array[i] = $('.b_box').eq(i).offset().left;
+      }
+
+      tmp();
+      
+      if($(window).width() < 1024) { 
+          $('.b_content').css('position', 'static');
+          $('.b_content').css('flex-direction', 'column');
+      }
+  });
 });
 
 
