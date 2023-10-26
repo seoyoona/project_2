@@ -1,13 +1,16 @@
 // nav
-document.addEventListener('DOMContentLoaded', function() {
-    var menuButton = document.querySelector('.menu_btn.gnb');
-    var nav = document.querySelector('.nav');
-    var overlay = document.querySelector('.overlay');
-
-    menuButton.addEventListener('click', function() {
-        nav.classList.toggle('active');
-
-    })});
+$(document).ready(function() {
+    $('.menu_btn.gnb').on('click',function(){
+       $('.nav').css('display','block');
+       $('.overlay').css('display','block');
+       $('body').css('overflow', 'hidden');
+    });
+    $('.cube').on('click',function(){
+        $('.nav').css('display','none');
+        $('.overlay').css('display','none');
+        $('body').css('overflow', 'auto');
+    });
+});
 
   // popup
 const closeBtn = document.querySelector('.close_btn');
